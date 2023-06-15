@@ -1,4 +1,3 @@
-#include <string.h>
 #include <unistd.h>
 
 /**
@@ -9,7 +8,7 @@
 int main(void)
 {
 	char msg[100] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	size_t n = strlen(msg);
+	size_t n = 100;
 
 	write(STDOUT_FILENO, msg, n);
 	return (1);
