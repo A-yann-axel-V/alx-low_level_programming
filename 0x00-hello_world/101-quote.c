@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
 
 /**
  * main - Entry point
@@ -7,9 +8,9 @@
  */
 int main(void)
 {
-	int fildes;
-	size_t nbyte;
+	char msg[100] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	size_t n = strlen(msg);
 
-	write(fildes, "and that piece of art is useful\" - Dora Korpar, 2015-10-19", nbyte);
+	write(STDOUT_FILENO, msg, n);
 	return (1);
 }
