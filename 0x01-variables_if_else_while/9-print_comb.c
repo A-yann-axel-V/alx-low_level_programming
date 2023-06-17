@@ -7,14 +7,13 @@
  */
 int main(void)
 {
-	int i = 48;
+	int i;
 
-	while (i < 103)
+	for (i = 0; i < 11; i++)
 	{
-		if (i == 57)
-			i += 40;
-		putchar(i);
-		i += 1;
+		putchar(i + 48);
+		putchar(' ');
+		putchar(',');
 	}
 	putchar('\n');
 
