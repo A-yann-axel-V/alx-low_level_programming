@@ -6,7 +6,6 @@
  *
  * Return: Always 0 (Success)
  */
-#define RAND_MAX 20
 int main(void)
 {
 	int n;
