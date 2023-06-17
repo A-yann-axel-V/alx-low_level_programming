@@ -10,7 +10,7 @@
 int main(void)
 {
 	int i = 0;
-	char alphabet[26];
+	char alphabet[27];
 
 	strcpy(alphabet, "abcdefghijklmnopqrstuvwxyz");
 	while (i < 26)
