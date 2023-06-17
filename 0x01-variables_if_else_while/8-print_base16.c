@@ -11,7 +11,7 @@ int main(void)
 
 	while (i < 71)
 	{
-		if (i > 58)
+		if (i == 58)
 			i = 65;
 		putchar(i);
 		i += 1;
