@@ -12,7 +12,7 @@ int main(void)
 	while (i < 71)
 	{
 		if (i == 58)
-			i = 65;
+			i += 40;
 		putchar(i);
 		i += 1;
 	}
