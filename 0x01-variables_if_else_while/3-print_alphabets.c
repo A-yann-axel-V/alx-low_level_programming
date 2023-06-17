@@ -16,7 +16,7 @@ int main(void)
 		if (i < 26)
 			putchar(alphabet[i]);
 		else
-			putchar(toupper(alphabet[i]));
+			putchar(toupper(alphabet[i-27]));
 		i += 1;
 	}
 
