@@ -12,6 +12,7 @@ int main(void)
 	while (i < 9)
 	{
 		putchar(i);
+		i += 1;
 	}
 	putchar('\n');
 
