@@ -19,11 +19,11 @@ int main(void)
 	char l = strng[-1];
 	char f = strng[0];
 
-	if (strcmp(last, "0") != 0 && strcmp(last, first) == -1)
+	if (strcmp(l, "0") != 0 && strcmp(l, f) == -1)
 	{
 		printf("Last digit of %d is %c and is less than %c and not 0", n, l, f);
 	}
-	else if (strcmp(last, "0") != 0 && strcmp(last, first) == 1)
+	else if (strcmp(l, "0") != 0 && strcmp(l, f) == 1)
 	{
 		printf("Last digit of %d is %c and is greater than %c", n, l, f);
 	}
