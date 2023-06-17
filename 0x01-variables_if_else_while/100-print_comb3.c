@@ -18,8 +18,10 @@ int main(void)
 				putchar(k + 48);
 				putchar(j + 48);
 				if (k != 8 && j != 9)
+				{
 					putchar(',');
 					putchar(' ');
+				}
 			}
 		}
 	}
