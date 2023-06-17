@@ -11,7 +11,7 @@ int main(void)
 	char alphabet[27] = "abcdefghijklmnopqrstuvwxyz";
 	int i = 0;
 
-	while (i < 27)
+	while (i < 26)
 	{
 		if (alphabet[i] != 'q' && alphabet[i] != 'e')
 			putchar(alphabet[i]);
