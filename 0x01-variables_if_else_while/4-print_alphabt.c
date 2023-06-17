@@ -15,6 +15,7 @@ int main(void)
 	{
 		if (alphabet[i] != 'q' && alphabet[i] != 'e')
 			putchar(alphabet[i]);
+		i += 1;
 	}
 
 	return (0);
