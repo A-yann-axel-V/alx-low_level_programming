@@ -8,17 +8,12 @@
  */
 int main(void)
 {
-	char alphabet[27] = "abcdefghijklmnopqrstuvwxyz";
-	int i = 0;
+	char letter;
 
-	while (i < 53)
-	{
-		if (i < 26)
-			putchar(alphabet[i]);
-		else
-			putchar(toupper(alphabet[i - 27]));
-		i += 1;
-	}
+	for (letter = 'a'; letter <= 'z'; letter++)
+		putchar(low);
+	for (letter = 'A'; letter <= 'Z'; letter++)
+		putchar(low);
 	putchar('\n');
 
 	return (0);
