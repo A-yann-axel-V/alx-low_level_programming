@@ -1,10 +1,6 @@
-#include <stdio.h>
+#ifndef main_h
+#define main_h
 
-/**
- * _putchar - prints one character
- *
- */
-void _putchar(char letter)
-{
-	putchar(letter);
-}
+char _putchar(char letter);
+
+#endif
