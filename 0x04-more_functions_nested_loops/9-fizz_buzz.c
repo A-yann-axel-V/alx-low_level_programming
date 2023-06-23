@@ -23,7 +23,7 @@ int main(void)
 		else if (n % 5 == 0)
 		{
 			for (j = 4; j < 8; j++)
-			{	
+			{
 				_putchar(strng[j]);
 			}
 		}
