@@ -7,11 +7,12 @@
  */
 void print_diagonal(int n)
 {
-	int k = 0, l;
+	int k = 0;
+	int l;
 
 	if (n != 0)
 	{
-		for (; k < n; k++)
+		for (k = 0; k < n; k++)
 		{
 			for (l = 0; l < k; l++)
 			{
