@@ -20,7 +20,9 @@ int main(void)
 		else
 			printf("%d", n);
 		if (n != 100)
-			printf(' ');
+			printf(" ");
+
+		n++;
 	}
 	printf("\n");
 
