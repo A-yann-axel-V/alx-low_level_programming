@@ -8,14 +8,15 @@
 
 void rev_string(char *s)
 {
-	int count = 0, i;
+	int count = 0, i, a, z;
 
 	while (s[count] != '\0')
 	{
 		count++;
 	}
 
-	int a = 0, z = count - 1;
+	a = 0;
+	z = count - 1;
 
 	for (i = 0; i < z; i++)
 	{
