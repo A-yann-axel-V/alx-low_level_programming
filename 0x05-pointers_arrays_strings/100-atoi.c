@@ -16,8 +16,8 @@ int _atoi(char *s)
 			sign *= -1;
 		if (s[i] >= 48 && s[i] <= 57)
 		{
-			value = s[i];
-			count = i + 1;
+			value = s[i] + '0';
+			count = i;
 			while (s[count] >= 48 && s[count] <= 57)
 			{
 				value = (value * 10) + (s[count] - '0');
