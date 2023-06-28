@@ -9,11 +9,18 @@
 
 void print_array(int *a, int n)
 {
-	int i;
+	int i, value;
 
 	for (i = 0; i < n; i++)
 	{
-		_putchar(a[i] + '0');
+		value = a[i];
+		if (value < 10)
+			_putchar(a[i] + '0');
+		else
+		{
+			_putchar((value / 10) + '0');
+			_putchar((value % 10) + '0');
+		}
 		if (i != n - 1)
 		{
 			_putchar(',');
