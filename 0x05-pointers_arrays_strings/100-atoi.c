@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * atoi - function that convert a string to an integer
+ * _atoi - function that convert a string to an integer
  * @s: String to be converted
  * Return: The integer from the string
  */
@@ -17,7 +17,7 @@ int _atoi(char *s)
 		if (s[i] >= 48 && s[i] <= 57)
 		{
 			value = s[i];
-			count = i;
+			count = i + 1;
 			while (s[count] >= 48 && s[count] <= 57)
 			{
 				value = (value * 10) + (s[count] - '0');
