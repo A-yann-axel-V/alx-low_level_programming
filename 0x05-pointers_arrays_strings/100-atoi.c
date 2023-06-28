@@ -21,7 +21,7 @@ int _atoi(char *s)
 			count = i;
 			while (s[count] >= 48 && s[count] <= 57)
 			{
-				value += (value * 10) + (s[count] - '0');
+				value = (value * 10) + (s[count] - '0');
 				count++;
 			}
 
@@ -31,5 +31,5 @@ int _atoi(char *s)
 		i++;
 	}
 
-	return (value);
+	return (value * sign);
 }
