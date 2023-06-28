@@ -9,7 +9,7 @@
 
 void print_array(int *a, int n)
 {
-	int i, value;
+	int i, value, n;
 
 	for (i = 0; i < n; i++)
 	{
@@ -18,7 +18,14 @@ void print_array(int *a, int n)
 			_putchar(a[i] + '0');
 		else
 		{
-			_putchar((value / 10) + '0');
+			n = value / 10;
+			if (n > 10)
+			{
+				_putchar((n / 10) + '0');
+				_putchar((n % 10) + '0');
+			}
+			else
+				_putchar((value / 10) + '0');
 			_putchar((value % 10) + '0');
 		}
 		if (i != n - 1)
