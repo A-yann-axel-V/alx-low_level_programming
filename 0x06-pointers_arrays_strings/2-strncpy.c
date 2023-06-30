@@ -5,7 +5,7 @@
  * @dest: Destination
  * @src: Source
  * @n: n as Integer
- * Return: nothing
+ * Return: pointer to the resulting string dest
  */
 
 char *_strncpy(char *dest, char *src, int n)
@@ -17,5 +17,8 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[count] = src[count];
 		count++;
 	}
-	*dest = '\0';
+
+	dest[count] = '\0';
+
+	return (dest);
 }
