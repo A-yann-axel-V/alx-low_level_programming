@@ -13,7 +13,7 @@ char *cap_string(char *s)
 
 	while (s[k] != '\0')
 	{
-		if (s[k] <= 'a' && s[k] >= 'z')
+		if (s[k] >= 'a' && s[k] <= 'z')
 		{
 			if (k == 0)
 				s[k] -= ('a' - 'A');
