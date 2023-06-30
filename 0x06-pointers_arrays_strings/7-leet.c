@@ -13,10 +13,10 @@ char *leet(char *s)
 
 	while (s[c] != '\0')
 	{
-		for (k = 0; k < 5; k++)
+		for (k = 0; k < 9; k++)
 		{
 			if (s[c] == letters[k])
-				s[c] = t[k] + '0';
+				s[c] = t[k];
 		}
 
 		c++;
