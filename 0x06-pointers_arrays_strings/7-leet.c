@@ -8,15 +8,15 @@
 
 char *leet(char *s)
 {
-	char *letters = "aeotl";
-	int *t = {4, 3, 0, 7, 1}, c = 0;
+	char *letters = "aeotl", *t = "43071";
+	int c = 0;
 
 	while (s[c] != '\0')
 	{
 		for (k = 0, k < 5, k++)
 		{
 			if (s[c] == letters[k])
-				s[c] = t[k];
+				s[c] = t[k] + '0';
 		}
 
 		c++;
