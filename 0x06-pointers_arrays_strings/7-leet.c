@@ -13,7 +13,7 @@ char *leet(char *s)
 
 	while (s[c] != '\0')
 	{
-		for (k = 0; k < 9; k++)
+		for (k = 0; k < 10; k++)
 		{
 			if (s[c] == letters[k])
 				s[c] = t[k];
