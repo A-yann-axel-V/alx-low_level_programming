@@ -5,8 +5,8 @@
  * @s1: char*
  * @s2: char*
  * Return: 15 (first greater than second)
- * 	-15 (second greater than first)
- *  	0 otherwise
+ * -15 (second greater than first)
+ * 0 otherwise
  */
 
 int _strcmp(char *s1, char *s2)
