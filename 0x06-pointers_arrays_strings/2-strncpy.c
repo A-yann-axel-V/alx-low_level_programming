@@ -5,7 +5,7 @@
  * @dest: Destination
  * @src: Source
  * @n: n as Integer
- * Return: Pointer
+ * Return: nothing
  */
 
 char *_strncpy(char *dest, char *src, int n)
@@ -20,6 +20,4 @@ char *_strncpy(char *dest, char *src, int n)
 		count++;
 	}
 	*dest = '\0';
-
-	return (dest);
 }
