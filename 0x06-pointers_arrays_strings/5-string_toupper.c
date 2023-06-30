@@ -10,10 +10,10 @@ char *string_toupper(char *s)
 {
 	int count = 0;
 
-	while (s[count] != '\0')
+	while (*s != '\0')
 	{
-		if (s[count] >= 'a' && s[count] <= 'z')
-			s[count] = s[count] + ('z' - 'Z');
+		if (*s >= 'a' && *s <= 'z')
+			*s = *s + ('a' - 'A');
 
 		count++;
 	}
