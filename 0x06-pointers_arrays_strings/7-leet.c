@@ -8,7 +8,7 @@
 
 char *leet(char *s)
 {
-	char *letters = "aeotl", *t = "43071";
+	char *letters = "aAeEoOtTlL", *t = "4433007711";
 	int c = 0, k;
 
 	while (s[c] != '\0')
