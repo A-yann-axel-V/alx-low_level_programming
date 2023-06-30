@@ -28,5 +28,5 @@ char *_strcat(char *dest, char *src)
 
 	dest[count] = '\0';
 
-	return ptr;
+	return (ptr);
 }
