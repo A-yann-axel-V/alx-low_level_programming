@@ -9,7 +9,7 @@
 char *cap_string(char *s)
 {
 	char *sep = " \t\n,;.!?\"(){}";
-	int k, p;
+	int k = 0, p;
 
 	while (s[k] != '\0')
 	{
