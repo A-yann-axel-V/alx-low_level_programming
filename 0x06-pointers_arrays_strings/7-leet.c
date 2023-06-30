@@ -9,11 +9,11 @@
 char *leet(char *s)
 {
 	char *letters = "aeotl", *t = "43071";
-	int c = 0;
+	int c = 0, k;
 
 	while (s[c] != '\0')
 	{
-		for (k = 0, k < 5, k++)
+		for (k = 0; k < 5; k++)
 		{
 			if (s[c] == letters[k])
 				s[c] = t[k] + '0';
