@@ -8,15 +8,21 @@
 
 char *rot13(char *s)
 {
-	int k = 0;
+	char *nletters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *rotletters = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int k = 0, p;
 
 	while (s[k] != '\0')
 	{
-		if ((s[k] >= 'a' && s[k] <= 'z') || (s[k] >= 'A' && s[k] <= 'Z'))
+		for (p = 0; p < 52; p++)
 		{
-			s[k] += 13;
+			if (s[k] == nletters[p])
+			{
+				s[k] = rotletters[p];
+				break;
+			}
 		}
-		
+
 		k++;
 	}
 
