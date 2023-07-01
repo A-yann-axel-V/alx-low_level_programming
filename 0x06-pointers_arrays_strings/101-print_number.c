@@ -24,10 +24,11 @@ void print_number(int n)
 		x = x / 10;
 	}
 
-	while (k / 10 != 0)
+	while (k != 0)
 	{
 		value = n / k;
 		_putchar(value + '0');
 		n %= k;
+		k/= 10;
 	}
 }
