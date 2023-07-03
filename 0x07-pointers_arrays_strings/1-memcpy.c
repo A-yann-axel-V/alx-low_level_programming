@@ -5,6 +5,7 @@
  * to memory area dest
  * @dest: Destination
  * @src: Source
+ * @n: n as Int for number of bytes
  * Return: pointer
  */
 
