@@ -3,6 +3,7 @@
 /**
  * _strchr - returns first occurrence of the
  * character c in the string s
+ * 
  * @s: Parameter as *char
  * @c: Parameter as char
  * Return: pointer
@@ -12,9 +13,7 @@ char *_strchr(char *s, char c)
 {
 	while (*s)
 	{
-		if (*s != c)
-			s++;
-		else
+		if (*s == c)
 			return (s);
 	}
 
