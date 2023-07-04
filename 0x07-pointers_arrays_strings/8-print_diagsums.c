@@ -16,8 +16,10 @@ void print_diagsums(int *a, int size)
 	int mainD = 0, secondD = 0;
 
 	for (i = 0; i < size; i++)
+	{
 		mainD += *(a + i * size + i);
 		secondD += *(a + i * size + (size - i - 1));
+	}
 
 	printf("%d, %d", mainD, secondD);
 }
