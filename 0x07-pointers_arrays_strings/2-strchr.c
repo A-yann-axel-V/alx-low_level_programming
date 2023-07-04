@@ -2,7 +2,7 @@
 
 /**
  * _strchr - returns first occurrence of the
- * 
+ *
  * @s: Parameter as *char
  * @c: Parameter as char
  * Return: pointer
