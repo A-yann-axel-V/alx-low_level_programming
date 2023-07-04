@@ -9,6 +9,8 @@
 
 void print_chessboard(char (*a)[8])
 {
+	int i;
+
 	while (*a)
 	{
 		for (i = 0; a[i]; i++)
