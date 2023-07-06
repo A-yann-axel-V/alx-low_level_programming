@@ -1,6 +1,19 @@
 #include "main.h"
 
 /**
+ * _strlen - count the characters of a string
+ * @s: The string
+ *
+ * Return: the number of characters
+ */
+
+int _strlen(char *s)
+{
+	if (*s)
+		return (1 + _strlen(s + 1));
+}
+
+/**
  * _checker - checks
  * @s: string
  * @n: Integer
@@ -27,13 +40,7 @@ int _checker(char *s, int n, int k)
 
 int is_palindrome(char *s)
 {
-	int slen = 0;
-
-	while (*s)
-	{
-		slen++;
-		s++;
-	}
+	int slen = _strlen(s);
 
 	if (slen == 0)
 		return (0);
