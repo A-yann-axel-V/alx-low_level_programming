@@ -14,7 +14,7 @@ int _prime(int n, int d)
 		return (1);
 	else if (n % d == 0)
 		return (0);
-	return(_prime(n, (d + 1)));
+	return (_prime(n, (d + 1)));
 }
 
 /**
