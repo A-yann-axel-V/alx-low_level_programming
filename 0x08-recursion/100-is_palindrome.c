@@ -13,9 +13,9 @@ int _checker(char *s, int n, int k)
 {
 	if (n >= k)
 		return (1);
-	else if (s[n] != s[p])
+	else if (s[n] != s[k])
 		return (0);
-	return (_checker(s, (n + 1), (k -1));
+	return (_checker(s, (n + 1), (k - 1)));
 }
 
 /**
