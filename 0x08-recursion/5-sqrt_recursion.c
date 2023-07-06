@@ -14,7 +14,7 @@ int _sqrt(int p, int n)
 		return (p);
 	else if (p * p > n)
 		return (-1);
-	sqrt(p + 1, n);
+	_sqrt(p + 1, n);
 }
 
 /**
