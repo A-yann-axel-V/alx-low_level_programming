@@ -24,6 +24,7 @@ int main (int argc, char *argv[])
 	{
 		putchar('0');
 		putchar('\n');
+		return (0);
 	}
 
 	coin = number / 25;
