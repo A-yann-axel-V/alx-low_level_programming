@@ -6,7 +6,7 @@
  * @argc: arguments count
  * @argv: arguments
  *
- * Return: 1
+ * Return: 0
  */
 
 int main(int argc, char **argv)
@@ -23,5 +23,5 @@ int main(int argc, char **argv)
 	b = atoi(argv[2]);
 	printf("%d\n", a * b);
 
-	return (1);
+	return (0);
 }
