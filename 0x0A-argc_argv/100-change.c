@@ -9,7 +9,7 @@
  * Return: 0 (Success) 1 (Failure)
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int coin = 0, number;
 
