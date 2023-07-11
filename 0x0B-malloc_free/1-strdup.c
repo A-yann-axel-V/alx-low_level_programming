@@ -12,17 +12,18 @@
 char *_strdup(char *str)
 {
 	unsigned int n = 0;
+	char *buffer = (char *)malloc(n * sizeof(char));
 
+	if (str == NULL || buffer == NULL)
+		return (NULL);
 	while (*str)
 	{
 		n++;
 		str++;
 	}
 
-	char *buffer = (char *)malloc(n * sizeof(char));
-	
-	if (str == NULL || buffer == NULL)
-		return (NULL);
+	buffer = (char *)realloc(buffer, n);
+
 	for (i = 0; i < n; i++)
 	{
 		buffer[i] = str[i];
