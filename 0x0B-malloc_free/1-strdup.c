@@ -12,17 +12,19 @@
 char *_strdup(char *str)
 {
 	unsigned int n = 0, i;
-	char *buffer = (char *)malloc(n * sizeof(char));
+	char *buffer;
 
-	if (str == NULL || buffer == NULL)
+	if (str == NULL)
 		return (NULL);
 	while (*str)
 	{
 		n++;
 		str++;
 	}
-
-	buffer = (char *)realloc(buffer, n);
+	
+	buffer = (char *)malloc((n * sizeof(char)) + 1);
+	if (buffer == NULL)
+		return (NULL);
 
 	for (i = 0; i < n; i++)
 	{
