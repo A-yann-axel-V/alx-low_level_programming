@@ -11,15 +11,14 @@
 
 char *_strdup(char *str)
 {
-	unsigned int n = 0, i;
+	int n = 0, i;
 	char *buffer;
 
 	if (str == NULL)
 		return (NULL);
-	while (*str)
+	while (str[n] != '\0')
 	{
 		n++;
-		str++;
 	}
 	
 	buffer = (char *)malloc((n * sizeof(char)) + 1);
@@ -30,6 +29,7 @@ char *_strdup(char *str)
 	{
 		buffer[i] = str[i];
 	}
+	buffer[n] = '\0';
 
 	return (buffer);
 }
