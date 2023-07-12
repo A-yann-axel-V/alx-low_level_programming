@@ -15,19 +15,17 @@ char *str_concat(char *s1, char *s2)
 	int k = 0, l = 0, i;
 	char *strng;
 
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
-
-	if (s1 != NULL && s2 != NULL)
+	if (s1 != NULL)
 	{
 		while (s1[k] != '\0')
 			k++;
+	}
 
+	if (s2 != NULL)
+	{
 		while (s2[l] != '\0')
 			l++;
 	}
-	else
-		return (NULL);
 
 	strng = (char *)malloc(((k + l) * sizeof(char)) + 1);
 	if (strng == NULL)
