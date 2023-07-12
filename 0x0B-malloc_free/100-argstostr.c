@@ -42,6 +42,7 @@ char *argstostr(int ac, char **av)
 			j++;
 		}
 		strng[j] = '\n';
+		j++;
 	}
 
 	strng[j] = '\0';
