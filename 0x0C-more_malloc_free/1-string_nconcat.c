@@ -10,11 +10,10 @@
  *
  * Return: Pointer or NULL
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int i = 0, j, len, len1 = 0, len2 = 0;
+	unsigned int i, len1 = 0, len2 = 0;
 
 	if (s1 != NULL)
 	{
@@ -28,18 +27,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			len2++;
 	}
 
-	len = len1 + len2;
-	ptr = (char *)malloc((len * sizeof(char)) + 1);
+	ptr = malloc((len1 + len2 + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
 
 	for (i = 0; s1[i]; i++)
 		ptr[i] = s1[i];
 
-	for (j = 0; s2[j] && j < n; j++)
-		ptr[len1 + j] = s2[j];
+	for (i = 0; s2[i] && i < n; i++)
+		ptr[len1 + i] = s2[i];
 
-	ptr[len] = '\0';
+	ptr[len1 + len2] = '\0';
 
 	return (ptr);
 }
