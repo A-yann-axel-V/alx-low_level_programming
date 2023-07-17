@@ -8,17 +8,7 @@
 
 int main(void)
 {
-	int i = 0;
-	char *name = __FILE__;
-
-	while (name[i])
-	{
-		if (name[i] >= 0 && name[i] < 10)
-			putchar('0' + name[i]);
-		else
-			putchar(name);
-		i++;
-	}
+	printf("%s", __FILE__);
 
 	return (0);
 }
