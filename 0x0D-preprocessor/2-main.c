@@ -14,9 +14,9 @@ int main(void)
 	while (name[i])
 	{
 		if (name[i] >= 0 && name[i] < 10)
-			_putchar('0' + name[i]);
+			putchar('0' + name[i]);
 		else
-			_putchar(name);
+			putchar(name);
 		i++;
 	}
 
