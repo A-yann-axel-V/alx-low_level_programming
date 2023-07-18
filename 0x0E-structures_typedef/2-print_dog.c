@@ -6,11 +6,21 @@
  *
  * @d: Structure dog
  *
- * Return: nothing
+ * Return: void
  */
 
 void print_dog(struct dog *d)
 {
 	if (d)
-		printf("Name: %s\nAge: %f\nOwner: %s", d.name, d.age, d.owner);
+	{
+		if (d->name != NULL)
+			printf("Name: %s\n", d->name);
+		else
+			printf("Name: (nil)\n");
+		printf("Age: %.6f\n", d->age);
+		if (d->owner != NULL)
+			printf("Owner: %s\n", d->owner);
+		else
+			printf("Name: (nil)\n");
+	}
 }
