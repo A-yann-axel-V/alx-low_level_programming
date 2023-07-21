@@ -10,16 +10,13 @@
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int count = 0, i = 0;
+	unsigned int count = 0, i = 0, put_sep;
 	va_list args;
-	int put_sep;
 	char *value;
 
 	va_start(args, format);
-
 	while (format[count])
 		count++;
-
 	while (i < count)
 	{
 		switch (format[i])
@@ -52,6 +49,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-
 	va_end(args);
 }
