@@ -12,6 +12,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int count = 0, i = 0;
 	va_list args;
+	int put_sep;
 	char *value;
 
 	va_start(args, format);
@@ -25,23 +26,28 @@ void print_all(const char * const format, ...)
 		{
 			case 'i':
 				printf("%d", va_arg(args, int));
+				put_sep = 0;
 				break;
 			case 'c':
 				printf("%c", va_arg(args, int));
+				put_sep = 0;
 				break;
 			case 'f':
-				printf("%f", va_arg(agrs float));
+				printf("%f", va_arg(args, double));
+				put_sep = 0;
 				break;
 			case 's':
 				value = va_arg(args, char*);
 				if (value == NULL)
 					value = "(nil)";
 				printf("%s", value);
+				put_sep = 0;
 				break;
 			default:
+				put_sep = 1;
 				break;
 		}
-		if (i != count - 1)
+		if (i != count - 1 && put_sep == 0)
 			printf(", ");
 		i++;
 	}
