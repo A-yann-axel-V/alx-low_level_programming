@@ -40,7 +40,7 @@ void print_all(const char * const format, ...)
 				put_sep = 1;
 				break;
 		}
-		if (i != count - 1 && put_sep == 0)
+		if (format[i + 1] && put_sep == 0)
 			printf(", ");
 		i++;
 	}
