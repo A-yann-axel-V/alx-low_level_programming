@@ -15,38 +15,41 @@ void print_all(const char * const format, ...)
 	char *value;
 
 	va_start(args, format);
-	while (format[count])
-		count++;
-	while (i < count)
+	if (format != NULL)
 	{
-		switch (format[i])
+		while (format[count])
+			count++;
+		while (i < count)
 		{
-			case 'c':
-				printf("%c", va_arg(args, int));
-				put_sep = 0;
-				break;
-			case 'i':
-				printf("%i", va_arg(args, int));
-				put_sep = 0;
-				break;
-			case 'f':
-				printf("%f", va_arg(args, double));
-				put_sep = 0;
-				break;
-			case 's':
-				value = va_arg(args, char*);
-				if (value == NULL)
-					value = "(nil)";
-				printf("%s", value);
-				put_sep = 0;
-				break;
-			default:
-				put_sep = 1;
-				break;
+			switch (format[i])
+			{
+				case 'c':
+					printf("%c", va_arg(args, int));
+					put_sep = 0;
+					break;
+				case 'i':
+					printf("%i", va_arg(args, int));
+					put_sep = 0;
+					break;
+				case 'f':
+					printf("%f", va_arg(args, double));
+					put_sep = 0;
+					break;
+				case 's':
+					value = va_arg(args, char*);
+					if (value == NULL)
+						value = "(nil)";
+					printf("%s", value);
+					put_sep = 0;
+					break;
+				default:
+					put_sep = 1;
+					break;
+			}
+			if (i != count - 1 && put_sep == 0)
+				printf(", ");
+			i++;
 		}
-		if (i != count - 1 && put_sep == 0)
-			printf(", ");
-		i++;
 	}
 	printf("\n");
 	va_end(args);
