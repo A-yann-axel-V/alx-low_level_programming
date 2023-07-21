@@ -10,7 +10,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int count = 0, i = 0, put_sep;
+	int count = 0, i = 0, put_sep;
 	va_list args;
 	char *value;
 
