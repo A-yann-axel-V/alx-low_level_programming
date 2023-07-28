@@ -5,7 +5,7 @@
 
 /**
  * struct list - Singly linked list
- * @strng: string - (malloc'ed string)
+ * @str: string - (malloc'ed string)
  * @len: length of the string
  * @next: points to the next node
  *
