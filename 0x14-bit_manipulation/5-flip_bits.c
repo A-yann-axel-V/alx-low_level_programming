@@ -20,7 +20,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	for (i = 0; i < MAX; i++)
 	{
-		if (num == (sub & result))
+		if (num == (sub & num))
 			count++;
 		num <<= 1;
 	}
