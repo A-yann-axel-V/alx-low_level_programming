@@ -69,6 +69,7 @@ int main(int ac, char **av)
 	ssize_t len_read, len_write;
 	int from_op, to_op, file_to_close, file_from_close;
 	char *file_from = av[1], *file_to = av[2], buffer[1024];
+	mode_t file_access_perm;
 
 	if (ac != 3)
 	{
@@ -78,8 +79,8 @@ int main(int ac, char **av)
 
 	from_op = open(file_from, O_RDONLY);
 	check((ssize_t) from_op, file_from, -1, -1, err98, -1, 98);
-	to_op = open(file_to, O_CREAT | O_TRUNC | O_WRONLY,
-			S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
+	file_access_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	to_op = open(file_to, O_CREAT | O_TRUNC | O_WRONLY, file_access_perm);
 	check((ssize_t) to_op, file_to, from_op, -1, err99, -1, 99);
 
 	len_read = 1024;
