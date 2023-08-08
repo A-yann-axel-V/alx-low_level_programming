@@ -10,7 +10,7 @@
  * if the file already exists, truncate it
  * if filename is NULL return -1
  * if text_content is NULL create an empty file
- * 
+ *
  * Description: The created file has those permissions: rw-------
  * If the file already exists, the permissions are not changed
  */
@@ -24,11 +24,11 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
-		while (text_content[len])
+		while (text_content[len] != NULL)
 			len++;
 	}
 
-	op = open(filename, O_CREAT | O_RDWR | O_TRUNC , 600);
+	op = open(filename, O_CREAT | O_RDWR | O_TRUNC, 600);
 	wr = write(op, text_content, len);
 
 	if (op == -1 || wr == -1)
