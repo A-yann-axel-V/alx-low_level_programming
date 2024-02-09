@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * binary_to_uint - converts a binary number to an unsigned int
  * @b: binary string to convert
@@ -17,7 +16,7 @@ unsigned int binary_to_uint(const char *b)
 	while (*b)
 	{
 		if (*b == '0' || *b == '1')
-			ui_output += (ui_output << 1) | (*b - '0');
+			ui_output = (ui_output << 1) | (*b - '0');
 		else
 			return (0);
 		b++;
