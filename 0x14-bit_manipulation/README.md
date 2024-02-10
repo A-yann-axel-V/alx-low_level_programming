@@ -1,1 +1,1 @@
-# 0x14 - Bit manipulation
+0x - Bit Manipulation
